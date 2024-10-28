@@ -12,14 +12,25 @@
         device-orientation-permission-ui="enabled: false">
         <a-assets>
             <!-- <img id="card" src="example2/pattern-Ar-Marker-katherine.png" /> -->
-            <a-asset-item id="avatarModel" src="saturn_nasa.glb"></a-asset-item>
+            <a-asset-item id="katherineModel" src="katherine.glb"></a-asset-item>
+            <a-asset-item id="benjaminModel" src="Benjamin.glb"></a-asset-item>
         </a-assets>
         <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
         <a-entity mindar-image-target="targetIndex: 0">
-            <!-- <a-plane src="#card" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane> -->
-            <a-gltf-model rotation="90 0 0" position="0 0 0" scale="0.04 0.02 0.04" src="#avatarModel" animation-mixer>
+
+            <a-gltf-model rotation="90 0 0" position="0 0 0" scale="4 4 4" src="#benjaminModel" animation-mixer>
+        </a-entity>
+        <a-entity mindar-image-target="targetIndex: 1">
+
+            <a-gltf-model rotation="100 0 0" position="0 0 0" scale="4 4 4" src="#katherineModel"
+                on-model-loaded="console.log('Model loaded successfully');"
+                on-error="console.error('Error loading model');" animation-mixer></a-gltf-model>
+
         </a-entity>
     </a-scene>
 </body>
 
 </html>
+
+<!-- <a-plane src="#card" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane> -->
+<!-- <a-plane src="#card" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane> -->
